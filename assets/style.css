@@ -934,10 +934,6 @@ video {
   height: 100%;
 }
 
-.h-5{
-  height: 1.25rem;
-}
-
 .max-h-64{
   max-height: 16rem;
 }
@@ -1000,10 +996,6 @@ video {
 
 .w-full{
   width: 100%;
-}
-
-.w-5{
-  width: 1.25rem;
 }
 
 .min-w-52{
@@ -1375,10 +1367,6 @@ video {
 
 .text-center{
   text-align: center;
-}
-
-.align-middle{
-  vertical-align: middle;
 }
 
 .font-mono{
