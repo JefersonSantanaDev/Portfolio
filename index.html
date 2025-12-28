@@ -717,19 +717,55 @@
             </form>
             <!-- Submit result -->
             <div class="submit-result">
-              <div id="success" class="hidden w-full mt-4 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 flex items-center gap-3 transition-all duration-300 animate-fade-in-up">
-                <i class="bi bi-check-circle-fill text-green-500 text-xl"></i>
-                <div class="flex-1">
-                  <h4 class="font-medium text-green-800 dark:text-green-200 text-sm">Mensagem enviada com sucesso!</h4>
-                  <p class="text-green-600 dark:text-green-400 text-xs mt-0.5">Obrigado pelo contato. Retornarei o mais breve possível.</p>
+              <!-- Success Message -->
+              <div id="success" class="hidden relative w-full mt-6 p-6 rounded-lg bg-white dark:bg-black border-2 border-black dark:border-white border-dashed items-center gap-4 opacity-0 translate-y-4 transition-all duration-500 ease-out">
+                <!-- Close button -->
+                <button onclick="document.getElementById('success').classList.add('hidden')" class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-200">
+                  <i class="bi bi-x-lg text-lg"></i>
+                </button>
+                
+                <div class="flex items-start gap-4">
+                  <!-- Icon Circle -->
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-black dark:bg-white flex items-center justify-center relative group">
+                    <i class="bi bi-check-lg text-white dark:text-black text-2xl font-bold"></i>
+                    <span class="absolute inset-0 rounded-full bg-black dark:bg-white opacity-30 animate-ping"></span>
+                  </div>
+                  
+                  <!-- Content -->
+                  <div class="flex-1 pr-6">
+                    <h4 class="font-poppins font-semibold text-lg text-black dark:text-white mb-1">
+                      Mensagem Enviada!
+                    </h4>
+                    <p class="font-mono text-sm text-black/70 dark:text-white/70 tracking-wide">
+                      Obrigado pelo contato. Retornarei o mais breve possível.
+                    </p>
+                  </div>
                 </div>
               </div>
               
-              <div id="error" class="hidden w-full mt-4 p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 flex items-center gap-3 transition-all duration-300 animate-fade-in-up">
-                <i class="bi bi-exclamation-circle-fill text-red-500 text-xl"></i>
-                <div class="flex-1">
-                  <h4 class="font-medium text-red-800 dark:text-red-200 text-sm">Erro ao enviar</h4>
-                  <p class="text-red-600 dark:text-red-400 text-xs mt-0.5">Houve um problema. Por favor, verifique os campos ou tente novamente.</p>
+              <!-- Error Message -->
+              <div id="error" class="hidden relative w-full mt-6 p-6 rounded-lg bg-white dark:bg-black border-2 border-black dark:border-white border-dashed items-center gap-4 opacity-0 translate-y-4 transition-all duration-500 ease-out">
+                <!-- Close button -->
+                <button onclick="document.getElementById('error').classList.add('hidden')" class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors duration-200">
+                  <i class="bi bi-x-lg text-lg"></i>
+                </button>
+                
+                <div class="flex items-start gap-4">
+                  <!-- Icon Circle -->
+                  <div class="flex-shrink-0 w-12 h-12 rounded-full bg-black dark:bg-white flex items-center justify-center relative">
+                    <i class="bi bi-exclamation-lg text-white dark:text-black text-2xl font-bold"></i>
+                    <span class="absolute inset-0 rounded-full border-2 border-black dark:border-white opacity-50 animate-pulse"></span>
+                  </div>
+                  
+                  <!-- Content -->
+                  <div class="flex-1 pr-6">
+                    <h4 class="font-poppins font-semibold text-lg text-black dark:text-white mb-1">
+                      Erro ao Enviar
+                    </h4>
+                    <p class="font-mono text-sm text-black/70 dark:text-white/70 tracking-wide">
+                      Houve um problema. Por favor, verifique os campos ou tente novamente.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

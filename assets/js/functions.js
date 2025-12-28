@@ -246,10 +246,18 @@ if (contactForm) {
       const errorMsg = document.getElementById("error");
 
       successMsg.classList.remove("hidden");
-      successMsg.classList.add("flex"); // Ensure flex display for alignment
+      successMsg.classList.add("flex");
+      
+      // Trigger animation
+      setTimeout(() => {
+        successMsg.style.opacity = "1";
+        successMsg.style.transform = "translateY(0)";
+      }, 10);
       
       errorMsg.classList.add("hidden");
       errorMsg.classList.remove("flex");
+      errorMsg.style.opacity = "0";
+      errorMsg.style.transform = "translateY(1rem)";
       
       contactForm.reset(); // Reset the form
     })
@@ -258,10 +266,18 @@ if (contactForm) {
       const errorMsg = document.getElementById("error");
 
       errorMsg.classList.remove("hidden");
-      errorMsg.classList.add("flex"); // Ensure flex display for alignment
+      errorMsg.classList.add("flex");
+      
+      // Trigger animation
+      setTimeout(() => {
+        errorMsg.style.opacity = "1";
+        errorMsg.style.transform = "translateY(0)";
+      }, 10);
       
       successMsg.classList.add("hidden");
       successMsg.classList.remove("flex");
+      successMsg.style.opacity = "0";
+      successMsg.style.transform = "translateY(1rem)";
       
       console.error("There was a problem with the fetch operation:", error);
     });
