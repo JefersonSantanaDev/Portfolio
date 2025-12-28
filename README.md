@@ -218,37 +218,6 @@ animation: {
 
 ---
 
-## 📦 Build para Produção
-
-Para gerar o CSS otimizado para produção:
-
-```bash
-npx tailwindcss -i ./src/input.css -o ./assets/style.css --minify
-```
-
-Isso criará uma versão minificada do CSS, removendo código não utilizado.
-
----
-
-## 🚀 Deploy
-
-### GitHub Pages
-
-1. Faça commit de todas as alterações
-2. Envie para o repositório GitHub
-3. Vá em Settings > Pages
-4. Selecione a branch `main` e a pasta `/root`
-5. Clique em Save
-
-### Netlify / Vercel
-
-1. Conecte seu repositório GitHub
-2. Configure o build command (se necessário): `npm run build`
-3. Configure o publish directory: `./`
-4. Deploy!
-
----
-
 ## 📞 Contato
 
 <div align="center">
@@ -263,12 +232,6 @@ Isso criará uma versão minificada do CSS, removendo código não utilizado.
 📱 **(79) 99937-1328** • 📧 **jferson-araujo@hotmail.com**
 
 </div>
-
----
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para uso pessoal. O template base é de **FlaTheme** com customizações e melhorias significativas.
 
 ---
 
