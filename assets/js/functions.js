@@ -242,17 +242,27 @@ if (contactForm) {
       }
     })
     .then(data => {
-      document.getElementById("success").classList.remove("hidden"); // Toggle hidden class
-      document.getElementById("success").classList.add("show-result"); // Show Success Message
-      document.getElementById("error").classList.add("hidden"); // Ensure error is hidden
-      document.getElementById("error").classList.remove("show-result");
+      const successMsg = document.getElementById("success");
+      const errorMsg = document.getElementById("error");
+
+      successMsg.classList.remove("hidden");
+      successMsg.classList.add("flex"); // Ensure flex display for alignment
+      
+      errorMsg.classList.add("hidden");
+      errorMsg.classList.remove("flex");
+      
       contactForm.reset(); // Reset the form
     })
     .catch(error => {
-      document.getElementById("error").classList.remove("hidden"); // Toggle hidden class
-      document.getElementById("error").classList.add("show-result"); // Show Error Message
-      document.getElementById("success").classList.add("hidden"); // Ensure success is hidden
-      document.getElementById("success").classList.remove("show-result");
+      const successMsg = document.getElementById("success");
+      const errorMsg = document.getElementById("error");
+
+      errorMsg.classList.remove("hidden");
+      errorMsg.classList.add("flex"); // Ensure flex display for alignment
+      
+      successMsg.classList.add("hidden");
+      successMsg.classList.remove("flex");
+      
       console.error("There was a problem with the fetch operation:", error);
     });
   });
