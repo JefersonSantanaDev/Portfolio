@@ -227,21 +227,32 @@ if (contactForm) {
 
     var formData = new FormData(this);
 
-    fetch("assets/php/contact-form.php", {
+    fetch("https://formspree.io/f/mnjqzzzr", {
       method: "POST",
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === "success") {
-        document.getElementById("success").classList.add("show-result"); // Show Success Message
-        contactForm.reset(); // Reset the form
-      } else {
-        document.getElementById("error").classList.add("show-result"); // Show Error Message
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
       }
     })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .then(data => {
+      document.getElementById("success").classList.remove("hidden"); // Toggle hidden class
+      document.getElementById("success").classList.add("show-result"); // Show Success Message
+      document.getElementById("error").classList.add("hidden"); // Ensure error is hidden
+      document.getElementById("error").classList.remove("show-result");
+      contactForm.reset(); // Reset the form
+    })
     .catch(error => {
+      document.getElementById("error").classList.remove("hidden"); // Toggle hidden class
       document.getElementById("error").classList.add("show-result"); // Show Error Message
+      document.getElementById("success").classList.add("hidden"); // Ensure success is hidden
+      document.getElementById("success").classList.remove("show-result");
       console.error("There was a problem with the fetch operation:", error);
     });
   });
