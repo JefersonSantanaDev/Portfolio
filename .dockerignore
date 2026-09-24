@@ -1,0 +1,15 @@
+.git
+.github
+.gitignore
+
+node_modules
+npm-debug.log*
+
+README.md
+package.json
+package-lock.json
+tailwind.config.js
+src
+
+# Legacy PHP handler is not used by the current Formspree-based contact form.
+assets/php
