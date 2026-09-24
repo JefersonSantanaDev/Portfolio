@@ -9,7 +9,7 @@
 
 **Portfólio pessoal minimalista com tema claro/escuro**
 
-[🌐 Ver Demo](https://portfolio-jefersondev.vercel.app/) • [📧 Contato](mailto:jferson-araujo@hotmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/jefersonaraujo199518/)
+[🌐 Ver Demo](https://portfolio.jeferson.site/) • [📧 Contato](mailto:jferson-araujo@hotmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/jefersonaraujo199518/)
 
 </div>
 

@@ -65,6 +65,41 @@
     .loaded .preloader {
         @apply invisible opacity-0;
     }
+    /* Frontwise credit */
+    .frontwise-credit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(0.25rem, 1vw, 0.75rem);
+        white-space: nowrap;
+        font-family: "Roboto Mono", monospace;
+        font-size: clamp(0.45rem, 1.6vw, 0.75rem);
+    }
+    .frontwise-credit__brand {
+        display: inline-flex;
+        align-items: center;
+        gap: clamp(0.25rem, 0.75vw, 0.5rem);
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+    }
+    .frontwise-credit__mark {
+        flex: none;
+        width: clamp(1.125rem, 3vw, 1.625rem);
+        height: clamp(1.125rem, 3vw, 1.625rem);
+    }
+    .frontwise-credit__mark-background {
+        fill: #000;
+    }
+    .frontwise-credit__mark-letter {
+        fill: #fff;
+    }
+    .dark .frontwise-credit__mark-background {
+        fill: #fff;
+    }
+    .dark .frontwise-credit__mark-letter {
+        fill: #000;
+    }
+
 }
 @layer utilities {
     /* Animation Delay */
