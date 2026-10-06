@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link href="assets/style.css" rel="stylesheet" />
+    <link href="assets/project-cards.css" rel="stylesheet" />
     <!-- Fonts/Icons -->
     <link
       href="assets/plugins/bootstrap-icons/bootstrap-icons.css"
@@ -70,8 +71,9 @@
             <li class="list-none inline-block">
               <a 
                 class="relative text-lg hover:text-red-600 dark:text-white dark:hover:text-red-400 transition ease-linear duration-100 group" 
-                href="https://drive.google.com/uc?export=download&id=1HQwcGUA3rK1y1ymvBHg31d9OJ6yqlLfI" 
-                target="_blank"
+                href="assets/curriculo-jeferson-araujo.pdf"
+                download="Curriculo-Jeferson-Araujo.pdf"
+                aria-label="Baixar currículo em PDF"
               >
                 <i class="bi bi-file-earmark-arrow-down"></i>
                 <span class="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 bg-black dark:bg-white text-white dark:text-black text-xs font-medium rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap after:content-[''] after:absolute after:bottom-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-b-black dark:after:border-b-white">Download CV</span>
@@ -271,150 +273,156 @@
                 usabilidade e design responsivo.
               </p>
             </div>
-            <div class="mt-6 lg:mt-12">
-              <div class="mb-6">
-                <span class="font-mono text-sm px-4 py-2 border border-black border-dashed rounded-full dark:text-white dark:border-white">
-                  Projetos
-                </span>
+            <!-- Projects redesign start -->
+            <div class="projects-showcase">
+              <div class="projects-showcase__meta">
+                <span>Projetos selecionados</span>
+                <span>04 projetos · desenvolvimento e design</span>
               </div>
-              <div
-                class="portfolio-grid grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6"
-              >
-                <!-- Portfolio Item 1 -->
+
+              <div class="portfolio-grid projects-grid">
+                <!-- Malena Fisioterapia -->
                 <div class="portfolio-item category-1">
-                  <div
-                    class="relative overflow-hidden group rounded-lg after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-t after:from-black/30 after:to-transparent after:opacity-0 after:transition after:ease-out after:duration-[160ms] hover:after:opacity-100 category-1"
+                  <a
+                    class="project-card"
+                    href="https://malenafisio.site/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Abrir o projeto Malena Fisioterapia em uma nova aba"
                   >
-                    <img
-                      class="transition ease-custom duration-500 group-hover:scale-105 group-hover:blur-[1.4px]"
-                      src="assets/images/project-habits.png"
-                      alt="Habits Project"
-                    />
-                    <div
-                      class="z-[1] absolute top-4 right-4 bg-black/20 px-4 py-2 rounded-full backdrop-blur-[5px] text-white font-mono font-normal text-sm uppercase tracking-[0.5px]"
-                    >
-                      Web App
+                    <div class="project-card__media">
+                      <img
+                        src="assets/images/project-malena-fisioterapia.png"
+                        alt="Página inicial do site Malena Fisioterapia"
+                      />
+                      <span class="project-card__number">01</span>
+                      <span class="project-card__category">Site institucional</span>
                     </div>
-                    <div
-                      class="z-[1] absolute bottom-0 left-0 w-full px-7 pb-6 invisible opacity-0 translate-y-2 group-hover:translate-y-0 group-hover:visible group-hover:opacity-100 group-hover:mb-0 transition ease-out duration-[160ms]"
-                    >
-                      <a
-                        class="font-poppins font-semibold text-3xl lg:text-4xl tracking-[0.5px] portfolio-stroke-text transition-all ease-linear duration-100"
-                        href="https://jefersonsantanadev.github.io/nlw-setup/"
-                        target="_blank"
-                        >Habits</a
-                      >
+                    <div class="project-card__content">
+                      <div class="project-card__heading">
+                        <h3>Malena Fisioterapia</h3>
+                        <span class="project-card__arrow" aria-hidden="true">
+                          <i class="bi bi-arrow-up-right"></i>
+                        </span>
+                      </div>
+                      <p>
+                        Site profissional com foco em confiança, acessibilidade
+                        e uma jornada simples até o agendamento.
+                      </p>
+                      <span class="project-card__stack">
+                        Astro · TypeScript · Tailwind CSS
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
+
                 <!-- JobCraft -->
                 <div class="portfolio-item category-2">
-                  <div
-                    class="relative overflow-hidden group rounded-lg after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-t after:from-black/30 after:to-transparent after:opacity-0 after:transition after:ease-out after:duration-[160ms] hover:after:opacity-100 category-1"
+                  <a
+                    class="project-card"
+                    href="https://jobcraft-sepia.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Abrir o projeto JobCraft em uma nova aba"
                   >
-                    <img
-                      class="transition ease-custom duration-500 group-hover:scale-105 group-hover:blur-[1.4px]"
-                      src="assets/images/project-jobcraft.png"
-                      alt="Página inicial da plataforma JobCraft"
-                    />
-                    <div
-                      class="z-[1] absolute top-4 right-4 bg-black/20 px-4 py-2 rounded-full backdrop-blur-[5px] text-white font-mono font-normal text-sm uppercase tracking-[0.5px]"
-                    >
-                      SaaS com IA
+                    <div class="project-card__media">
+                      <img
+                        src="assets/images/project-jobcraft.png"
+                        alt="Página inicial da plataforma JobCraft"
+                      />
+                      <span class="project-card__number">02</span>
+                      <span class="project-card__category">SaaS com IA</span>
                     </div>
-                    <div
-                      class="z-[1] absolute bottom-0 left-0 w-full px-7 pb-6 invisible opacity-0 translate-y-2 group-hover:translate-y-0 group-hover:visible group-hover:opacity-100 group-hover:mb-0 transition ease-out duration-[160ms]"
-                    >
-                      <a
-                        class="font-poppins font-semibold text-3xl lg:text-4xl tracking-[0.5px] portfolio-stroke-text transition-all ease-linear duration-100"
-                        href="https://jobcraft-sepia.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        JobCraft
-                      </a>
-                      <p class="mt-2 text-sm text-white/70">
-                        Plataforma com IA para analisar e otimizar currículos
-                        para vagas e sistemas ATS.
+                    <div class="project-card__content">
+                      <div class="project-card__heading">
+                        <h3>JobCraft</h3>
+                        <span class="project-card__arrow" aria-hidden="true">
+                          <i class="bi bi-arrow-up-right"></i>
+                        </span>
+                      </div>
+                      <p>
+                        Plataforma com inteligência artificial para analisar e
+                        otimizar currículos para vagas e sistemas ATS.
                       </p>
-                      <p class="mt-2 text-xs text-white font-mono">
-                        React • TypeScript • FastAPI • PostgreSQL • IA
-                      </p>
+                      <span class="project-card__stack">
+                        React · TypeScript · FastAPI · PostgreSQL
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
+
                 <!-- Soma -->
                 <div class="portfolio-item category-1">
-                  <div
-                    class="relative overflow-hidden group rounded-lg after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-t after:from-black/30 after:to-transparent after:opacity-0 after:transition after:ease-out after:duration-[160ms] hover:after:opacity-100 category-1"
+                  <a
+                    class="project-card"
+                    href="https://soma-one-beta.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Abrir o projeto Soma em uma nova aba"
                   >
-                    <img
-                      class="transition ease-custom duration-500 group-hover:scale-105 group-hover:blur-[1.4px]"
-                      src="assets/images/project-soma.png"
-                      alt="Dashboard do aplicativo financeiro Soma"
-                    />
-                    <div
-                      class="z-[1] absolute top-4 right-4 bg-black/20 px-4 py-2 rounded-full backdrop-blur-[5px] text-white font-mono font-normal text-sm uppercase tracking-[0.5px]"
-                    >
-                      Fintech
+                    <div class="project-card__media">
+                      <img
+                        src="assets/images/project-soma.png"
+                        alt="Dashboard do aplicativo financeiro Soma"
+                      />
+                      <span class="project-card__number">03</span>
+                      <span class="project-card__category">Fintech</span>
                     </div>
-                    <div
-                      class="z-[1] absolute bottom-0 left-0 w-full px-7 pb-6 invisible opacity-0 translate-y-2 group-hover:translate-y-0 group-hover:visible group-hover:opacity-100 group-hover:mb-0 transition ease-out duration-[160ms]"
-                    >
-                      <a
-                        class="font-poppins font-semibold text-3xl lg:text-4xl tracking-[0.5px] portfolio-stroke-text transition-all ease-linear duration-100"
-                        href="https://soma-one-beta.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Soma</a
-                      >
-                      <p class="mt-2 text-sm text-white/70">
+                    <div class="project-card__content">
+                      <div class="project-card__heading">
+                        <h3>Soma</h3>
+                        <span class="project-card__arrow" aria-hidden="true">
+                          <i class="bi bi-arrow-up-right"></i>
+                        </span>
+                      </div>
+                      <p>
                         Aplicação privada para casais organizarem receitas,
                         despesas, contas e cartões em um só lugar.
                       </p>
-                      <p class="mt-2 text-xs text-white font-mono">
-                        Vue 3 • TypeScript • Supabase • Tailwind CSS
-                      </p>
+                      <span class="project-card__stack">
+                        Vue 3 · TypeScript · Supabase · Tailwind CSS
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
+
                 <!-- Frontwise Solutions -->
                 <div class="portfolio-item category-2">
-                  <div
-                    class="relative overflow-hidden group rounded-lg after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-t after:from-black/30 after:to-transparent after:opacity-0 after:transition after:ease-out after:duration-[160ms] hover:after:opacity-100 category-1"
+                  <a
+                    class="project-card"
+                    href="https://frontwise.jeferson.site/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Abrir o projeto Frontwise em uma nova aba"
                   >
-                    <img
-                      class="transition ease-custom duration-500 group-hover:scale-105 group-hover:blur-[1.4px]"
-                      src="assets/images/project-frontwise.png"
-                      alt="Página inicial da Frontwise Solutions"
-                    />
-                    <div
-                      class="z-[1] absolute top-4 right-4 bg-black/20 px-4 py-2 rounded-full backdrop-blur-[5px] text-white font-mono font-normal text-sm uppercase tracking-[0.5px]"
-                    >
-                      Landing Page
+                    <div class="project-card__media">
+                      <img
+                        src="assets/images/project-frontwise.png"
+                        alt="Página inicial da Frontwise Solutions"
+                      />
+                      <span class="project-card__number">04</span>
+                      <span class="project-card__category">Landing page</span>
                     </div>
-                    <div
-                      class="z-[1] absolute bottom-0 left-0 w-full px-7 pb-6 invisible opacity-0 translate-y-2 group-hover:translate-y-0 group-hover:visible group-hover:opacity-100 group-hover:mb-0 transition ease-out duration-[160ms]"
-                    >
-                      <a
-                        class="font-poppins font-semibold text-3xl lg:text-4xl tracking-[0.5px] portfolio-stroke-text transition-all ease-linear duration-100"
-                        href="https://frontwise.jeferson.site/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Frontwise</a
-                      >
-                      <p class="mt-2 text-sm text-white/70">
+                    <div class="project-card__content">
+                      <div class="project-card__heading">
+                        <h3>Frontwise</h3>
+                        <span class="project-card__arrow" aria-hidden="true">
+                          <i class="bi bi-arrow-up-right"></i>
+                        </span>
+                      </div>
+                      <p>
                         Landing page profissional para apresentar serviços
                         front-end e gerar oportunidades comerciais.
                       </p>
-                      <p class="mt-2 text-xs text-white font-mono">
-                        Next.js • React • TypeScript • Tailwind CSS
-                      </p>
+                      <span class="project-card__stack">
+                        Next.js · React · TypeScript · Tailwind CSS
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
+            <!-- Projects redesign end -->
           </div>
 
           <!-- Services section -->
